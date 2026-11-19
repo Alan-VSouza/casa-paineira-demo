@@ -7,7 +7,7 @@ const SUGESTOES = ['Kitnet perto da USP até R$ 1.200', 'Apartamento de 2 quarto
 
 const BOAS_VINDAS: Msg = {
   role: 'assistente',
-  texto: 'Oi! Eu sou a **Bia**, da Casa Paineira Imóveis. Me diga o que você procura (bairro, faculdade, orçamento por mês) que eu mostro as opções e já marco a visita.',
+  texto: 'Oi, eu sou a **Bia**, da Casa Paineira Imóveis. Me diga o que você procura (bairro, faculdade, orçamento por mês) que eu mostro as opções e já marco a visita.',
 }
 
 /** Renderiza **negrito** e listas com "- " sem usar HTML vindo da IA. */
@@ -94,14 +94,14 @@ export default function Chat() {
   const mostrarSugestoes = msgs.length <= 2 && !enviando
 
   return (
-    <section className="chat" aria-label="Conversa com a Bia, assistente da Casa Paineira Imóveis">
-      <header className="chat-topo">
+    <div className="chat" role="region" aria-label="Conversa com a Bia, assistente da Casa Paineira Imóveis">
+      <div className="chat-topo">
         <div className="avatar" aria-hidden="true">B</div>
         <div>
           <strong>Bia</strong>
           <span className="status"><i /> online agora · busca imóveis e marca visitas</span>
         </div>
-      </header>
+      </div>
 
       <div className="chat-msgs" role="log" aria-live="polite" ref={listaRef}>
         {msgs.map((m, i) => (
@@ -150,6 +150,6 @@ export default function Chat() {
         </button>
       </form>
       <p className="chat-rodape">Demonstração com imobiliária fictícia. Não envie dados pessoais.</p>
-    </section>
+    </div>
   )
 }
