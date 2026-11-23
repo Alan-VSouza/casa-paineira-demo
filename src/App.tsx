@@ -193,8 +193,8 @@ export default function App() {
                   <li><span className="rows__name">Só imóvel da carteira</span><p>Valores e disponibilidade vêm do seu cadastro. Ela não inventa.</p></li>
                   <li><span className="rows__name">Painel para os corretores</span><p>Visitas e pedidos de proposta num só lugar. <a className="link" href="/painel">Abrir o painel desta demo</a></p></li>
                 </ul>
-                <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Contratar uma assistente com o Alan</a>
-                <p className="t-small muted">Projeto de Alan Souza, desenvolvedor de IA em São Carlos.</p>
+                <div className="btn-row"><a className="btn btn--primary" href="https://wa.me/5519994450160?text=Oi%2C%20Alan%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20Bia%20e%20quero%20uma%20assistente%20assim%20para%20a%20minha%20imobili%C3%A1ria." target="_blank" rel="noreferrer">Quero uma Bia na minha imobiliária</a></div>
+                <p className="t-small muted">Fala direto com o Alan Souza, desenvolvedor de IA em São Carlos, pelo WhatsApp. <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Ver o portfólio</a></p>
               </div>
               <div className="frame frame--photo span-6 start-7" style={{ aspectRatio: '4 / 5', maxHeight: 708, width: '100%' }}>
                 <img className="frame__img" src="/img/chaves-mesa.jpg" alt="Molho de chaves sobre uma mesa de madeira" loading="lazy" />
@@ -222,7 +222,7 @@ export default function App() {
               <div className="span-2 footer__col"><h3>Imóveis</h3><ul><li><a href="#estudantes">Estudantes</a></li><li><a href="#familias">Famílias</a></li></ul></div>
               <div className="span-2 footer__col"><h3>Aluguel</h3><ul><li><a href="#como-alugar">Contrato</a></li><li><a href="#loja">Loja</a></li></ul></div>
               <div className="span-2 footer__col"><h3>Visitas</h3><ul><li><a href="#atendimento">Chat com a Bia</a></li><li><a href="/painel">Painel</a></li></ul></div>
-              <div className="span-2 footer__col"><h3>Empresas</h3><ul><li><a href="#para-empresas">Como funciona</a></li><li><a href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Contratar</a></li></ul></div>
+              <div className="span-2 footer__col"><h3>Empresas</h3><ul><li><a href="#para-empresas">Como funciona</a></li><li><a href="https://wa.me/5519994450160?text=Oi%2C%20Alan%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20Bia%20e%20quero%20uma%20assistente%20assim%20para%20a%20minha%20imobili%C3%A1ria." target="_blank" rel="noreferrer">Contratar</a></li></ul></div>
             </div>
             <div className="footer__legal">
               <span>&copy; 2026 Casa Paineira Imóveis, negócio fictício</span>
