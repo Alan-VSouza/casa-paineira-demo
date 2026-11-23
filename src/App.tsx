@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import Chat from './Chat'
+import PainelPrevia, { type Previa } from './PainelPrevia'
+import { iniciarPolimento } from './polimento'
 import { CLINICA, IMOVEIS, custoTotal, type Imovel } from '../shared/clinica'
 
 const reais = (n: number) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 })
@@ -54,8 +56,11 @@ function Vitrine({ ids, titulo, linha, secao }: { ids: string[]; titulo: string;
   )
 }
 
+const PREVIA: Previa = { painel: 'Painel dos corretores', resumo: [['3', 'visitas marcadas fora do horário'], ['1', 'proposta para o corretor']], listaTitulo: 'Visitas marcadas pela Bia esta noite', itens: [['22:12', 'Lucas T.', 'Kitnet perto da USP, R$ 1.150', 'Sáb 10h'], ['23:40', 'Marina e Pedro', 'Apartamento de 2 quartos, Centro', 'Seg 18h'], ['06:45', 'Gustavo R.', 'Casa de 3 quartos, Santa Felícia', 'Ter 9h']], pedidoTitulo: 'Para o corretor responder', pedido: ['Proposta abaixo do anunciado', 'Quer oferecer R$ 950 na kitnet. A Bia não negociou e passou ao corretor.'] }
+
 export default function App() {
   usarKit()
+  useEffect(() => iniciarPolimento(), [])
 
   return (
     <>
@@ -196,9 +201,7 @@ export default function App() {
                 <div className="btn-row"><a className="btn btn--primary" href="https://wa.me/5519994450160?text=Oi%2C%20Alan%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20Bia%20e%20quero%20uma%20assistente%20assim%20para%20a%20minha%20imobili%C3%A1ria." target="_blank" rel="noreferrer">Quero uma Bia na minha imobiliária</a></div>
                 <p className="t-small muted">Fala direto com o Alan Souza, desenvolvedor de IA em São Carlos, pelo WhatsApp. <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Ver o portfólio</a></p>
               </div>
-              <div className="frame frame--photo span-6 start-7" style={{ aspectRatio: '4 / 5', maxHeight: 708, width: '100%' }}>
-                <img className="frame__img" src="/img/chaves-mesa.jpg" alt="Molho de chaves sobre uma mesa de madeira" loading="lazy" />
-              </div>
+              <PainelPrevia p={PREVIA} />
             </div>
           </div>
         </section>
