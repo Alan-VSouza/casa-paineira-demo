@@ -199,7 +199,7 @@ export default function App() {
                   <li><span className="rows__name">Painel para os corretores</span><p>Visitas e pedidos de proposta num só lugar. <a className="link" href="/painel">Abrir o painel desta demo</a></p></li>
                 </ul>
                 <div className="btn-row"><a className="btn btn--primary" href="https://wa.me/5519994450160?text=Oi%2C%20Alan%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20Bia%20e%20quero%20uma%20assistente%20assim%20para%20a%20minha%20imobili%C3%A1ria." target="_blank" rel="noreferrer">Quero uma Bia na minha imobiliária</a></div>
-                <p className="t-small muted">Fala direto com o Alan Souza, desenvolvedor de IA em São Carlos, pelo WhatsApp. <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Ver o portfólio</a></p>
+                <p className="t-small">Fala direto com o Alan Souza, desenvolvedor de IA em São Carlos, pelo WhatsApp. <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Ver o portfólio</a></p>
               </div>
               <PainelPrevia p={PREVIA} />
             </div>
